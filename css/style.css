@@ -1,0 +1,220 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+/* 静态字体的引用，兼任不同的浏览器 */
+@font-face{
+	font-family:"iconfont";
+	src:url("../images/font/iconfont.eot");
+	src:url("../images/font/iconfont.eot") format("embedded-opentype"),
+		url("../images/font/iconfont.woff") format("woff"),
+		url("../images/font/iconfont.ttf") format("truetype"),
+		url("../images/font/iconfont.svg#iconfog") format("svg");
+}
+
+ul{
+	list-style:none;
+}
+
+a:link,a:visited{
+	text-decoration:none;
+}
+
+body{
+	font-family:"微软雅黑";
+	color:#14191e;
+}
+
+.main{
+	width:1200px;
+	height:460px;
+	margin:30px auto;
+	position:relative;
+	overflow:hidden;
+}
+
+/* 图片轮播 */
+.banner{
+	width:1200px;
+	height:460px;
+	position:relative;
+	overflow:hidden;
+}
+
+.banner-slide{
+	width:1200px;
+	height:460px;
+	position:absolute;
+	background-repeat:no-repeat;
+	display:none;
+}
+
+/*通过添加.slide-active使图片显示*/
+.slide-active{
+	display:block;
+}
+
+.slide1{
+	background-image:url("../images/bg1.jpg");
+}
+
+.slide2{
+	background-image:url("../images/bg2.jpg");
+}
+
+.slide3{
+	background-image:url("../images/bg3.jpg");
+}
+
+.button{
+	width:40px;
+	height:80px;
+	position:absolute;
+	left:244px;
+	top:50%;
+	margin-top:-40px;
+	background:url("../images/arrow.png") no-repeat center;
+}
+
+.button:hover{
+	background-color:#ccc;
+	opacity:0.8;
+	filter:opacity(80%);/*提高性能*/
+}
+
+.prev{
+	transform:rotate(180deg);
+}
+
+.next{
+	left:auto;/*left和right的同时使用时，以先定义的为主。则需要将其中一个设置为auto*/
+	right:0;
+}
+
+.dots{
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	
+}
+
+.dots span{
+	width:12px;
+	height:12px;
+	border-radius:50%;
+	margin-left:10px;
+	display:inline-block;
+	background-color:rgba(7,17,27,.4);
+	box-shadow:0 0 0 2px rgba(255,255,255,0.8) inset;
+	cursor:pointer;
+}
+
+.dots span.active{/*标签与class一起使用时，要紧挨着*/
+	background-color:#fff;
+	box-shadow:0 0 0 2px rgba(7,17,27,.4) inset;	
+}
+
+/* 导航菜单 */
+.menu-box{
+	width:244px;
+	height:460px;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:rgba(7,17,27,.4);
+	opacity:0.5;
+	z-index:1;
+}
+
+.menu-content{
+	width:244px;
+	height:454px;
+	position:absolute;
+	top:6px;
+	left:0;
+	z-index:2;/* 优先级越大，越靠前 */
+}
+
+.menu-item{
+	height:64px;
+	line-height:66px;
+	font-size:16px;
+	position:relative;
+}
+
+.menu-item a:link,.menu-item a:visited{
+	color:#fff;
+}
+
+.menu-item a{
+	display:block;
+	border-bottom:1px solid rgba(255,255,255,.2);
+	padding-left:30px;
+	height:63px;
+}
+
+.menu-item i{
+	position:absolute;
+	right:32px;
+	top:0;
+	font-size:30px;
+	font-family:"iconfont";
+	font-style:normal;
+	font-weight:normal;
+	color:rgba(255,255,255,.4);
+}
+
+.sub-menu{
+	width:730px;
+	height:458px;
+	border:1px solid #d9dde1;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,.1);
+	position:absolute;
+	left:244px;
+	top:0;
+	z-index:3;
+}
+
+.inner-box{
+	width:100%;
+	height:100%;
+	background-image:url("../images/fe.png");
+	position:relative;
+	display:none;
+}
+
+.sub-inner-box{
+	width:652px;
+	margin-left:40px;
+	position:absolute;
+	overflow:hidden;
+}
+
+.title{
+	color:#f01414;
+	font-size:20px;
+	font-weight:bold;
+	line-height:20px;
+	margin:20px 0 30px 0;
+}
+
+.sub-row{
+	margin-top:25px;
+}
+
+.bold{
+	font-weight:bold;
+}
+
+.mr10{
+	margin-right:10px;
+}
+
+.ml10{
+	margin-left:10px;
+}
+
+.hide{
+	display:none;
+}
